@@ -1,0 +1,7 @@
+# Variable block
+location="eastus"
+resourceGroup="rg-demoaz400-bicep-002"
+
+az group create --name $resourceGroup --location $location
+
+az deployment group create --name ExampleDeployment --resource-group $resourceGroup --template-file storage.bicep --parameters storage.parameters.json
